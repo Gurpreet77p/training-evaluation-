@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Webpage</title>
+    <link rel="stylesheet" href="5th.css"> <!-- Link to the external CSS file -->
+    <script>
+        function showAlert() {
+            alert("Hello, world!");
+        }
+
+        // Function to generate a random color
+        function changeBackgroundColor() {
+            // Generate a random color in hexadecimal format
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            // Apply the random color to the body background
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Webpage</h1>
+</header>
+
+<main>
+    <p>This is a simple webpage created to demonstrate basic HTML structure and JavaScript interaction.</p>
+    <button onclick="showAlert()">Click Me!</button>
+    
+    <!-- Button to change background color -->
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    
+    <!-- Image with hover effect -->
+    <div class="image-container">
+        <img src="2024-03-12.jpg" alt="Sample Image" class="hover-image">
+    </div>
+</main>
+
+<footer>
+    <p>Gurpreet </p>
+</footer>
+
+</body>
+</html>

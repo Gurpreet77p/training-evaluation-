@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Webpage</title>
+    <link rel="stylesheet" href="7th.css"> <!-- Link to the external CSS file -->
+    <script>
+        function showAlert() {
+            alert("Hello, world!");
+        }
+
+        function changeBackgroundColor() {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        // Function to show alert with Name and Age
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            alert("Name: " + name + "\nAge: " + age);
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Webpage</h1>
+</header>
+
+<main>
+    <p>This is a simple webpage created to demonstrate basic HTML structure and JavaScript interaction.</p>
+    <button onclick="showAlert()">Click Me!</button>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    
+    <!-- Form for Name and Age -->
+    <form onsubmit="event.preventDefault(); submitForm();">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+</main>
+
+<footer>
+    <p>Made by [Your Name]</p>
+</footer>
+
+</body>
+</html>
